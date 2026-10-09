@@ -321,6 +321,7 @@ The application was tested using different input scenarios.
 * **Searching:** linear and binary search with existing and non-existing values
 * **Graph:** add vertices, add edges, display graph, BFS, DFS
 * **Performance:** linear search, binary search, BFS, DFS
+* **Graph and Performance:** BFS and DFS results and execution times verified using the sample graph
 
 ---
 
