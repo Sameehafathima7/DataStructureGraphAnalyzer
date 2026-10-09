@@ -1,16 +1,12 @@
 # Data Structure and Graph Performance Analyzer
 
-## 1. Project Title
-
-**Data Structure and Graph Performance Analyzer**
-
 A Java console-based application developed to demonstrate different data structures, searching algorithms, graph traversal algorithms, and their performance.
 
 ---
 
-## 2. Project Overview
+## 1. Project Overview
 
-The **Data Structure and Graph Performance Analyzer** is a Java console application developed as a practical project for the Data Structures and Algorithms module.
+The **Data Structure and Graph Performance Analyzer** is a Java console application developed as a practical project for the Data Structures and Algorithms module (CIT300).
 
 The main purpose of this project is to implement and demonstrate important data structures and algorithms in a single menu-driven application.
 
@@ -29,7 +25,7 @@ The project follows basic Object-Oriented Programming principles and uses separa
 
 ---
 
-## 3. Team Members
+## 2. Team Members
 
 | No. | Name             | Student ID | Role                             |
 | --- | ---------------- | ---------- | -------------------------------- |
@@ -40,7 +36,7 @@ The project follows basic Object-Oriented Programming principles and uses separa
 
 ---
 
-## 4. Team Responsibilities
+## 3. Team Responsibilities
 
 ### ARF.SAMEEHA - 23DA2-0943
 
@@ -64,7 +60,7 @@ The project follows basic Object-Oriented Programming principles and uses separa
 ### AM.RAHNA FARWEEN - 23DA2-0564
 
 * Data structure related tasks
-* Testing and verification
+* Testing and verification of data structure operations
 * Support for project development
 
 ### AS.ASFA - 23DA2-0525
@@ -75,7 +71,7 @@ The project follows basic Object-Oriented Programming principles and uses separa
 
 ---
 
-## 5. Technologies Used
+## 4. Technologies Used
 
 * **Programming Language:** Java
 * **IDE:** Eclipse IDE
@@ -85,9 +81,7 @@ The project follows basic Object-Oriented Programming principles and uses separa
 
 ---
 
-## 6. Data Structures Implemented
-
-The following data structures are implemented in the project:
+## 5. Data Structures Implemented
 
 1. Array
 2. Stack
@@ -97,11 +91,9 @@ The following data structures are implemented in the project:
 
 ---
 
-# 7. System Features
+## 6. System Features
 
-## 7.1 Array Operations
-
-The Array module provides the following operations:
+### 6.1 Array Operations
 
 * Insert an element
 * Delete an element
@@ -112,13 +104,9 @@ The Array module provides the following operations:
 
 The array uses a fixed capacity and stores integer values.
 
----
-
-## 7.2 Stack Operations
+### 6.2 Stack Operations
 
 The Stack module follows the **LIFO (Last In, First Out)** principle.
-
-Available operations:
 
 * Push
 * Pop
@@ -127,21 +115,15 @@ Available operations:
 * Empty stack handling
 * Full stack handling
 
-Example:
-
 ```text
 Push → Add an element to the top
 Pop  → Remove the top element
 Peek → View the top element
 ```
 
----
-
-## 7.3 Queue Operations
+### 6.3 Queue Operations
 
 The Queue module follows the **FIFO (First In, First Out)** principle.
-
-Available operations:
 
 * Enqueue
 * Dequeue
@@ -150,21 +132,15 @@ Available operations:
 * Empty queue handling
 * Full queue handling
 
-Example:
-
 ```text
 Enqueue → Add an element to the rear
 Dequeue → Remove an element from the front
 Front   → View the front element
 ```
 
----
-
-## 7.4 Linked List Operations
+### 6.4 Linked List Operations
 
 The Linked List module uses nodes to store data.
-
-Available operations:
 
 * Insert
 * Delete
@@ -172,47 +148,19 @@ Available operations:
 * Display
 * Empty list handling
 
-The implementation supports searching for an element and deleting a matching element.
+### 6.5 Searching Operations
+
+**Linear Search** checks elements one by one until the required value is found or the end of the list is reached. Time Complexity: `O(n)`
+
+**Binary Search** works on a sorted array by repeatedly dividing the search range into two parts. Time Complexity: `O(log n)`
+
+The system displays the search result, the number of steps, and the search method.
 
 ---
 
-## 7.5 Searching Operations
+## 7. Graph Operations
 
-The project implements two searching algorithms:
-
-### Linear Search
-
-Linear Search checks elements one by one until the required value is found or the end of the list is reached.
-
-**Time Complexity:**
-
-```text
-O(n)
-```
-
-### Binary Search
-
-Binary Search works on a sorted array by repeatedly dividing the search range into two parts.
-
-**Time Complexity:**
-
-```text
-O(log n)
-```
-
-The system displays:
-
-* Search result
-* Number of steps
-* Search method
-
----
-
-# 8. Graph Operations
-
-The Graph module represents a graph using an adjacency list.
-
-The following graph operations are available:
+The Graph module represents a graph using an adjacency list (undirected connections).
 
 * Add Vertex
 * Add Edge
@@ -220,81 +168,37 @@ The following graph operations are available:
 * Breadth First Search (BFS)
 * Depth First Search (DFS)
 
-The graph uses an undirected connection between vertices.
+### 7.1 Breadth First Search (BFS)
+
+BFS visits vertices level by level and uses a Queue to manage the vertices to be visited.
+
+Time Complexity: `O(V + E)` (V = vertices, E = edges)
+
+### 7.2 Depth First Search (DFS)
+
+DFS explores one path as deeply as possible before backtracking. It is implemented using recursion.
+
+Time Complexity: `O(V + E)`
 
 ---
 
-## 8.1 Breadth First Search (BFS)
-
-BFS visits vertices level by level.
-
-A Queue is used to manage the vertices that need to be visited.
-
-**Time Complexity:**
-
-```text
-O(V + E)
-```
-
-Where:
-
-* V = Number of vertices
-* E = Number of edges
-
----
-
-## 8.2 Depth First Search (DFS)
-
-DFS explores one path as deeply as possible before going back and exploring another path.
-
-The project implements DFS using recursion.
-
-**Time Complexity:**
-
-```text
-O(V + E)
-```
-
-Where:
-
-* V = Number of vertices
-* E = Number of edges
-
----
-
-# 9. Performance Comparison
-
-The project includes a separate performance analysis module.
+## 8. Performance Comparison
 
 The performance analyzer compares:
 
-### Searching Algorithms
+* Linear Search vs Binary Search
+* BFS vs DFS
 
-* Linear Search
-* Binary Search
-
-### Graph Traversal Algorithms
-
-* BFS
-* DFS
-
-The application measures:
+It measures:
 
 * Number of operation steps
-* Execution time
-* Search result
-* Traversal result
+* Execution time (using `System.nanoTime()`)
+* Search / traversal result
 * Time complexity
-
-Execution time is measured using Java's:
-
-```java
-System.nanoTime()
-```
 
 ---
 
-# 10. Time Complexity Analysis
+## 9. Time Complexity Analysis
 
 | Data Structure / Algorithm | Operation       | Time Complexity |
 | -------------------------- | --------------- | --------------- |
@@ -317,9 +221,7 @@ System.nanoTime()
 
 ---
 
-# 11. Main Menu
-
-The application provides the following main menu:
+## 10. Main Menu
 
 ```text
 ======================================
@@ -339,14 +241,13 @@ The application provides the following main menu:
 
 ---
 
-# 12. Project Structure
+## 11. Project Structure
 
 ```text
 DataStructureGraphAnalyzer
 │
 ├── src
 │   └── datastructuregraphanalyzer
-│       │
 │       ├── Main.java
 │       ├── ArrayOperations.java
 │       ├── StackOperations.java
@@ -359,266 +260,73 @@ DataStructureGraphAnalyzer
 │
 ├── .gitignore
 ├── .classpath
-└── .project
+├── .project
+└── README.md
 ```
 
 ---
 
-# 13. Java Classes
+## 12. Java Classes
 
-## Main.java
-
-Controls the main application menu and connects all modules.
-
-Responsibilities:
-
-* Display main menu
-* Receive user input
-* Validate input
-* Call each module
-* Exit the application
-
----
-
-## ArrayOperations.java
-
-Handles array-related operations.
-
-Functions include:
-
-* Insert
-* Delete
-* Search
-* Display
+| Class                      | Description                                                          |
+| -------------------------- | -------------------------------------------------------------------- |
+| `Main.java`                | Displays the main menu, validates input, and calls each module       |
+| `ArrayOperations.java`     | Insert, delete, search, and display on a fixed-size array            |
+| `StackOperations.java`     | Array-based stack with push, pop, peek, and display                  |
+| `QueueOperations.java`     | Circular queue with enqueue, dequeue, front, and display             |
+| `LinkedListOperations.java`| Node-based linked list with insert, delete, search, and display      |
+| `SearchingOperations.java` | Linear and Binary Search with step counting and result display       |
+| `GraphOperations.java`     | Adjacency-list graph with add vertex, add edge, display, BFS, DFS    |
+| `PerformanceAnalyzer.java` | Measures steps and execution time of searching and traversal methods |
+| `DisplayAllResults.java`   | Summary of implemented structures, algorithms, and complexities      |
 
 ---
 
-## StackOperations.java
+## 13. Input Validation and Error Handling
 
-Implements stack operations using an array.
-
-Functions include:
-
-* Push
-* Pop
-* Peek
-* Display
-
----
-
-## QueueOperations.java
-
-Implements a circular queue.
-
-Functions include:
-
-* Enqueue
-* Dequeue
-* Front
-* Display
-
----
-
-## LinkedListOperations.java
-
-Implements a linked list using nodes.
-
-Functions include:
-
-* Insert
-* Delete
-* Search
-* Display
-
----
-
-## SearchingOperations.java
-
-Implements:
-
-* Linear Search
-* Binary Search
-* Step counting
-* Search result display
-
----
-
-## GraphOperations.java
-
-Implements graph operations using an adjacency list.
-
-Functions include:
-
-* Add Vertex
-* Add Edge
-* Display Graph
-* BFS
-* DFS
-
----
-
-## PerformanceAnalyzer.java
-
-Measures algorithm performance.
-
-Functions include:
-
-* Linear Search performance
-* Binary Search performance
-* BFS performance
-* DFS performance
-* Step count
-* Execution time
-* Complexity display
-
----
-
-## DisplayAllResults.java
-
-Provides a summary of the implemented data structures, algorithms, and their time complexities.
-
----
-
-# 14. Input Validation
-
-The application includes input validation to handle incorrect user input.
-
-For example, if the user enters text instead of a number:
+The application handles incorrect input safely instead of terminating unexpectedly.
 
 ```text
 Invalid input! Please enter a number.
-```
-
-The system asks the user to enter a valid number.
-
-The main menu also validates the range of choices.
-
-For example:
-
-```text
 Invalid choice! Please select 1-9.
-```
-
-Empty data structures are also handled safely.
-
-Examples:
-
-```text
 Stack is empty!
 Queue is empty!
 Linked List is empty!
 ```
 
----
+Handled situations:
 
-# 15. Object-Oriented Programming
-
-The project follows basic Object-Oriented Programming concepts.
-
-Different functionalities are separated into different classes.
-
-For example:
-
-* Array operations are handled by `ArrayOperations`
-* Stack operations are handled by `StackOperations`
-* Queue operations are handled by `QueueOperations`
-* Linked List operations are handled by `LinkedListOperations`
-* Searching is handled by `SearchingOperations`
-* Graph operations are handled by `GraphOperations`
-* Performance analysis is handled by `PerformanceAnalyzer`
-
-This separation makes the project easier to understand, test, maintain, and extend.
-
----
-
-# 16. Error Handling
-
-The application handles common invalid situations such as:
-
-* Invalid menu input
 * Non-numeric input
 * Invalid menu choices
-* Empty stack
-* Empty queue
-* Empty linked list
-* Full array
-* Full stack
-* Full queue
+* Empty stack, queue, and linked list
+* Full array, stack, and queue
 * Searching for values that do not exist
-
-The system displays suitable messages instead of terminating unexpectedly.
 
 ---
 
-# 17. Testing
+## 14. Object-Oriented Programming
+
+Each functionality is separated into its own class (for example `StackOperations`, `QueueOperations`, `GraphOperations`, `PerformanceAnalyzer`). This makes the project easier to understand, test, maintain, and extend.
+
+---
+
+## 15. Testing
 
 The application was tested using different input scenarios.
 
-### Array Testing
-
-* Insert values
-* Search existing values
-* Search non-existing values
-* Delete values
-* Display values
-
-### Stack Testing
-
-* Push values
-* Peek value
-* Pop values
-* Display stack
-* Pop from an empty stack
-
-### Queue Testing
-
-* Enqueue values
-* View front
-* Dequeue values
-* Display queue
-* Dequeue from an empty queue
-
-### Linked List Testing
-
-* Insert values
-* Search values
-* Delete values
-* Display list
-* Display empty list
-
-### Searching Testing
-
-* Linear search with existing value
-* Linear search with non-existing value
-* Binary search with existing value
-* Binary search with non-existing value
-
-### Graph Testing
-
-* Add vertices
-* Add edges
-* Display graph
-* BFS traversal
-* DFS traversal
-
-### Performance Testing
-
-* Linear Search performance
-* Binary Search performance
-* BFS performance
-* DFS performance
+* **Array:** insert, search existing / non-existing values, delete, display
+* **Stack:** push, peek, pop, display, pop from an empty stack
+* **Queue:** enqueue, view front, dequeue, display, dequeue from an empty queue
+* **Linked List:** insert, search, delete, display, display empty list
+* **Searching:** linear and binary search with existing and non-existing values
+* **Graph:** add vertices, add edges, display graph, BFS, DFS
+* **Performance:** linear search, binary search, BFS, DFS
 
 ---
 
-# 18. Performance Demonstration
+## 16. Performance Demonstration
 
-The performance analyzer uses a larger dataset for searching algorithms to demonstrate the difference between Linear Search and Binary Search.
-
-For graph performance, a sample graph is created and both BFS and DFS are executed.
-
-The system displays the number of steps and execution time.
-
-Example:
+The performance analyzer uses a larger dataset for the searching algorithms to show the difference between Linear Search and Binary Search. For graph performance, a sample graph is created and both BFS and DFS are executed.
 
 ```text
 ===== LINEAR SEARCH PERFORMANCE =====
@@ -627,8 +335,6 @@ Steps: ...
 Execution Time: ... ns
 Time Complexity: O(n)
 ```
-
-Example:
 
 ```text
 ===== BINARY SEARCH PERFORMANCE =====
@@ -640,148 +346,101 @@ Time Complexity: O(log n)
 
 ---
 
-# 19. How to Run the Project
+## 17. How to Run the Project
 
 ### Requirements
 
 * Java JDK
 * Eclipse IDE
-* Git (optional for cloning from GitHub)
+* Git (optional, for cloning from GitHub)
 
 ### Steps
 
 1. Open Eclipse IDE.
 2. Import or open the `DataStructureGraphAnalyzer` project.
-3. Make sure the Java files are inside the package:
-
-```text
-datastructuregraphanalyzer
-```
-
-4. Open:
-
-```text
-Main.java
-```
-
-5. Right-click `Main.java`.
-6. Select:
-
-```text
-Run As → Java Application
-```
-
-7. The main menu will appear in the Eclipse Console.
-8. Enter the required menu option.
-9. Follow the instructions shown by the application.
+3. Make sure the Java files are inside the package `datastructuregraphanalyzer`.
+4. Open `Main.java`.
+5. Right-click `Main.java` and select **Run As → Java Application**.
+6. The main menu appears in the Eclipse Console.
+7. Enter the required menu option and follow the instructions.
 
 ---
 
-# 20. GitHub Collaboration
+## 18. GitHub Collaboration
 
-Git and GitHub were used for version control and project collaboration.
+Git and GitHub were used for version control and team collaboration.
 
-The project repository contains the source code and project files.
-
-The team uses:
-
-* Git
-* GitHub
-* Commits
-* Branches
-* Pull Requests
-* Repository management
-
-Each member's contribution is tracked through Git history where applicable.
-
----
-
-# 21. Repository
-
-**GitHub Repository:**
+* All four members work on the same repository.
+* Each commit records the author's name, so every member's contribution is visible in the Git history.
+* Commit messages end with the contributor's name, for example:
 
 ```text
-DataStructureGraphAnalyzer
+Reviewed and tested data structure operations - Rahna
+Reviewed and tested Graph/BFS operations - Asfa
 ```
 
-The repository contains the Java source code and supporting project files.
-
----
-
-# 22. `.gitignore`
-
-The project includes a `.gitignore` file to prevent unnecessary Eclipse-generated and compiled files from being added to version control.
-
-The following files/folders are ignored:
+### Useful commands
 
 ```text
-bin/
-.settings/
-*.class
-*.jar
+git status
+git add .
+git commit -m "message - Name"
+git push
+git log --format="%an | %s"
 ```
 
 ---
 
-# 23. Advantages of the System
+## 19. Repository
+
+**GitHub Repository:** `DataStructureGraphAnalyzer`
+
+The repository contains the Java source code, Eclipse project files, and this documentation.
+
+---
+
+## 20. Advantages
 
 * Simple console-based interface
-* Easy to understand
-* Demonstrates multiple data structures
-* Demonstrates searching algorithms
-* Demonstrates graph traversal
-* Includes performance analysis
-* Includes time complexity information
+* Demonstrates multiple data structures, searching algorithms, and graph traversal
+* Includes performance analysis and time complexity information
 * Includes input validation
 * Uses separate Java classes
 * Supports Git and GitHub collaboration
 
 ---
 
-# 24. Limitations
+## 21. Limitations
 
 * The application is console-based.
-* The system mainly works with integer values for data structure examples.
-* Performance results may vary depending on the computer and system environment.
-* The application is designed mainly for educational and demonstration purposes.
+* The system mainly works with integer values.
+* Performance results may vary depending on the computer and environment.
+* Designed mainly for educational and demonstration purposes.
 
 ---
 
-# 25. Future Improvements
+## 22. Future Improvements
 
-Possible future improvements include:
-
-* Adding a graphical user interface
-* Supporting larger and dynamic datasets
-* Adding AVL Tree implementation
-* Adding Hashing implementation
-* Adding graph visualization
+* Graphical user interface
+* Larger and dynamic datasets
+* AVL Tree and Hashing implementations
+* Graph visualization
 * Saving performance results to a file
-* Adding more advanced performance charts
-* Supporting different data types
+* Advanced performance charts
+* Support for different data types
 
 ---
 
-# 26. Conclusion
+## 23. Conclusion
 
-The **Data Structure and Graph Performance Analyzer** provides a practical demonstration of fundamental data structures and algorithms using Java.
-
-The project implements arrays, stacks, queues, linked lists, searching algorithms, and graph traversal algorithms.
-
-The performance analyzer helps demonstrate the difference between algorithms using operation counts, execution time, and time complexity.
-
-Overall, this project provides practical understanding of how data structures and algorithms are implemented and analyzed in a Java application.
+The **Data Structure and Graph Performance Analyzer** provides a practical demonstration of fundamental data structures and algorithms using Java. It implements arrays, stacks, queues, linked lists, searching algorithms, and graph traversal algorithms, and the performance analyzer shows the difference between algorithms using operation counts, execution time, and time complexity.
 
 ---
 
-## 27. Project Status
+## 24. Project Status
 
-**Status:** Completed and Tested
-
-**Application Type:** Java Console Application
-
-**Programming Language:** Java
-
-**Development Environment:** Eclipse IDE
-
-**Version Control:** Git and GitHub
+* **Status:** Completed and Tested
+* **Application Type:** Java Console Application
+* **Programming Language:** Java
+* **Development Environment:** Eclipse IDE
+* **Version Control:** Git and GitHub
